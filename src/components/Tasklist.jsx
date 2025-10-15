@@ -19,7 +19,7 @@ export default function TaskList({ tasks, updateTask, deleteTask }) {
             <button onClick={() => toggleComplete(index)}>
               {task.completed ? 'Undo' : 'Complete'}
             </button>
-            <button onClick={() => deleteTask(index)}>
+            <button onClick={() => deleteTask(index)} style={{ color: 'red' }}>
               Delete
             </button>
           </li>

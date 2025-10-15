@@ -1,7 +1,8 @@
-/* Minimal, clean styles for the Task Manager */
+
 
 * {
   box-sizing: border-box;
+  
 }
 
 html, body {
@@ -10,10 +11,11 @@ html, body {
   font-family: -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   background: #399292ce;
   color: #111111;
+ min-height: 100vh;
 }
 
 .App {
-  max-width: 720px;
+  max-width: 60%;
   margin: 0 auto;
   padding: 24px;
 }
@@ -70,6 +72,7 @@ header p {
 #btns {
   display: flex;
   gap: 8px;
+  padding: 10px;
 }
 
 #btns select {
@@ -82,7 +85,8 @@ header p {
 .task-list {
   list-style: none;
   padding: 0;
-  margin: 16px 0;
+  margin: 18px 0;
+  font-weight: bold;
 }
 
 .task-list li {
@@ -90,6 +94,7 @@ header p {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+  margin-top: 10px;
   padding: 12px;
   border: 1px solid #eeeeee;
   border-radius: 8px;
@@ -111,19 +116,25 @@ header p {
 }
 
 .progress-tracker {
-  margin-top: 16px;
+  margin-top: 10px;
+ display: flex;
+  flex-direction: column;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 .progress-bar {
-  height: 8px;
-  background: #eeeeee;
-  border-radius: 999px;
+   height: 10px;
+  background-color: #eee;
+  border-radius: 5px;
   overflow: hidden;
 }
 
 .progress {
   height: 100%;
-  background: #16a34a;
+  width: 60%; /* Example: 60% progress */
+  background-color: #4caf50;
+  transition: width 0.3s ease;
 }
 
 .clear-btn {
@@ -135,3 +146,11 @@ header p {
   border-radius: 6px;
   cursor: pointer;
 }
+ #error {
+ display: inline-block;
+  color: black;                  /* Text color */
+  border-radius: 999px;          /* Fully rounded corners */
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+} 
